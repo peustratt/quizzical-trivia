@@ -1,5 +1,6 @@
 # Quizzical-trivia using React
 
+- Link para o design no [Figma](https://www.figma.com/file/E9S5iPcm10f0RIHK8mCqKL/Quizzical-App?node-id=0%3A1)
 ## 📋 Requisitos
 
 ### Criar um quiz Webapp que lista perguntas
@@ -14,9 +15,9 @@
 
 ## 🛠 Tecnologias
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png" width="20" height="16" /> ReactJS
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" align="center" width="30" height="30" /> ReactJS
 
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="20" height="16" /> CSS
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" align="center" width="30" height="30" /> CSS
 
 ## ▶️ Inicializando o projeto
 
