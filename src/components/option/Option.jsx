@@ -12,8 +12,6 @@ function Option({ option, correctAnswer, handleCLick, selectedOption }) {
         };
     }
 
-    
-
     return (
         <button
             className="option__btn"

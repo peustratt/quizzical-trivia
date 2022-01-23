@@ -1,18 +1,21 @@
 import React, { useState } from 'react';
-import shuffleArray from '../../utils';
+import { useEffect } from 'react/cjs/react.development';
 import Option from '../option/Option';
 
 
-function Question({ question, incorrectAnswers, correctAnswer}) {
+function Question({ question, correctAnswer, gameIsOver, options }) {
 
-    const [shuffledOptions, setShuffledOptions] = useState(() => shuffleArray([...incorrectAnswers, correctAnswer]));
-    const [selectedOption, setSelectedOption] =  useState(shuffledOptions[0])
+    const [selectedOption, setSelectedOption] =  useState(() => options[0])
+
+    // useEffect(() => {
+    //     setOptions(shuffleArray([...incorrectAnswers, correctAnswer]))
+    // },[incorrectAnswers, correctAnswer])
 
     function handleClick(option) {
-        setSelectedOption(option)
+        !gameIsOver && setSelectedOption(option)
     }
 
-    const optionsEl = shuffledOptions.map((option, index) => (
+    const optionsEl = options.map((option, index) => (
         <Option
             key={index}
             option={option}

@@ -1,7 +1,7 @@
 import React from 'react';
 
-function ActionBtn() {
-  return <button className='action-btn'>Jogar</button>;
+function ActionBtn({ endGame }) {
+  return <div className='action-btn' onClick={endGame}>Jogar</div>;
 }
 
 export default ActionBtn;
