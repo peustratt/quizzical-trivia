@@ -7,9 +7,9 @@
 
 ❌ Criar duas telas, (começar & questões)
 
-❌ Puxar 5 questões da [OTDB API](https://opentdb.com/api_config.php)
+✔️ Puxar 5 questões da [OTDB API](https://opentdb.com/api_config.php)
 
-❌ Contabilizar os acertos e renderizar o score em forma de fração
+✔️ Contabilizar os acertos e renderizar o score em forma de fração
 
 ❌ Indicar quais foram as respostas corretas
 
