@@ -24,6 +24,7 @@ function Question({ question, correctAnswer, gameIsOver, options, handleIsCorrec
             correctAnswer={correctAnswer}
             handleCLick={() => handleClick(option)}
             selectedOption={selectedOption}
+            gameIsOver={gameIsOver}
         />
     ));
 
