@@ -8,6 +8,7 @@ function App() {
   const [allQuestions, setAllQuestions] = useState([])
   const [gameIsOver, setGameIsover] = useState(() => false)
   const [answerCount, setAnswerCount] = useState(0)
+  const [restartGame, setRestartGame] = useState(0)
 
   useEffect(() => {
     fetch("https://opentdb.com/api.php?amount=5")
@@ -26,12 +27,16 @@ function App() {
             };
         })
     ));
-  },[])
+  },[restartGame])
 
-  console.log(allQuestions)
-
-  function endGame() {
-    setGameIsover(true)
+  function handleGame() {
+    if (!gameIsOver) {
+      setGameIsover(true);
+    } else {
+      setGameIsover(false)
+      setAnswerCount(0)
+      setRestartGame(Math.random())
+    }
   }
 
   function handleIsCorrect() {
@@ -53,12 +58,11 @@ function App() {
     );
   })
 
-  console.log(answerCount)
-
   return (
       <main>
           {allQuestionsEl}
-          <ActionBtn endGame={endGame} />
+          {gameIsOver && answerCount}
+          <ActionBtn handleGame={handleGame} />
       </main>
   );
 }
