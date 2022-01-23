@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --ff-primary: 'Karla', sans-serif;
+    --ff-secondary: 'Inter, sans-serif';
+    --clr-primary: #293264;
+    --clr-secondary: #4D5B9E;
+    --clr-tertiary: #D6DBF5;
+}

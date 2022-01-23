@@ -1,2 +1,5 @@
 @import './global';
 @import './app';
+@import'./components/question/question.css';
+@import'./components/option/option.css';
+@import'./components/actionBtn/actionBtn.css'

@@ -1,0 +1,10 @@
+.option__btn {
+    font-size: 1em;
+    font-family: var(--ff-secondary);
+    font-weight: 600;
+    border-radius: 8px;
+    color: var(--clr-primary);
+    border: #4D5B9E solid 1.6px;
+    background-color: transparent;
+    padding: .2em 1em;
+}

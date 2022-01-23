@@ -1,4 +1,5 @@
 import React from 'react';
+import ActionBtn from './components/actionBtn/ActionBtn';
 import Question from './components/question/Question';
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
           <Question />
           <Question />
           <Question />
+          <ActionBtn />
       </main>
   );
 }

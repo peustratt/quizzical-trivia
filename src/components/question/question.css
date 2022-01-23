@@ -1,0 +1,27 @@
+.question-box {
+    position: relative;
+    display: grid;
+    gap: 1rem;
+}
+
+.question-box::after {
+    position: absolute;
+    width: 100%;
+    height: 1.3px;
+    content: '';
+    background-color: #DBDEF0;
+    opacity: .7;
+    top: calc(100% + 1em);
+    
+}
+
+.question-title {
+    color: var(--clr-primary);
+    font-family: var(--ff-primary);
+    font-weight: 700;
+}
+
+.options {
+    display: flex;
+    gap: 1em;
+}
