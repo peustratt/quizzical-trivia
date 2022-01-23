@@ -7,6 +7,7 @@ import shuffleArray from './utils';
 function App() {
   const [allQuestions, setAllQuestions] = useState([])
   const [gameIsOver, setGameIsover] = useState(() => false)
+  const [answerCount, setAnswerCount] = useState(0)
 
   useEffect(() => {
     fetch("https://opentdb.com/api.php?amount=5")
@@ -21,15 +22,21 @@ function App() {
                 options: shuffleArray([
                     ...question.incorrect_answers,
                     question.correct_answer,
-                ]),
-                isCorrect: false,
+                ])
             };
         })
     ));
   },[])
 
+  console.log(allQuestions)
+
   function endGame() {
     setGameIsover(true)
+  }
+
+  function handleIsCorrect() {
+    console.log(answerCount)
+    setAnswerCount(prevCount => prevCount + 1)
   }
 
   const allQuestionsEl = allQuestions.map(question => {
@@ -38,13 +45,15 @@ function App() {
             key={question.key}
             question={question.question}
             type={question.type}
-            correctAnswer={question.correct_answer}
+            correctAnswer={question.correctAnswer}
             options={question.options}
-            isCorrect={question.isCorrect}
             gameIsOver={gameIsOver}
+            handleIsCorrect={handleIsCorrect}
         />
     );
   })
+
+  console.log(answerCount)
 
   return (
       <main>

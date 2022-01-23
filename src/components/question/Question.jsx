@@ -3,13 +3,15 @@ import { useEffect } from 'react/cjs/react.development';
 import Option from '../option/Option';
 
 
-function Question({ question, correctAnswer, gameIsOver, options }) {
+function Question({ question, correctAnswer, gameIsOver, options, handleIsCorrect }) {
 
     const [selectedOption, setSelectedOption] =  useState(() => options[0])
 
-    // useEffect(() => {
-    //     setOptions(shuffleArray([...incorrectAnswers, correctAnswer]))
-    // },[incorrectAnswers, correctAnswer])
+    useEffect(() => {
+        if (gameIsOver && correctAnswer === selectedOption) {
+            handleIsCorrect()
+        }
+    }, [gameIsOver])
 
     function handleClick(option) {
         !gameIsOver && setSelectedOption(option)
