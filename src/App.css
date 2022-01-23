@@ -6,3 +6,10 @@ main {
     margin: 0 auto;
     padding: 4em 4em 1em;
 }
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}

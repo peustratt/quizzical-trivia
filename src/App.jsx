@@ -61,8 +61,10 @@ function App() {
   return (
       <main>
           {allQuestionsEl}
-          {gameIsOver && answerCount}
-          <ActionBtn handleGame={handleGame} />
+          <div className="box">
+              {gameIsOver && <p>{`Você acertou ${answerCount}/5`}</p>}
+              <ActionBtn handleGame={handleGame} gameIsOver={gameIsOver}/>
+          </div>
       </main>
   );
 }
