@@ -13,3 +13,10 @@ main {
     justify-content: center;
     gap: 1em;
 }
+
+.acertos {
+   font-family: var(--ff-secondary); 
+   font-weight: 700;
+   color: var(--clr-primary);
+   font-size: 1.3em;
+}

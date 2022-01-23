@@ -40,7 +40,6 @@ function App() {
   }
 
   function handleIsCorrect() {
-    console.log(answerCount)
     setAnswerCount(prevCount => prevCount + 1)
   }
 
@@ -62,7 +61,7 @@ function App() {
       <main>
           {allQuestionsEl}
           <div className="box">
-              {gameIsOver && <p>{`Você acertou ${answerCount}/5`}</p>}
+              {gameIsOver && <p className='acertos' >{`Você acertou ${answerCount}/5`}</p>}
               <ActionBtn handleGame={handleGame} gameIsOver={gameIsOver}/>
           </div>
       </main>
