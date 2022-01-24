@@ -1,5 +1,5 @@
 # Quizzical-trivia using React
-
+- Aplicação publicada no [Netlify](https://quizical-trivia.netlify.app/)
 - Link para o design no [Figma](https://www.figma.com/file/E9S5iPcm10f0RIHK8mCqKL/Quizzical-App?node-id=0%3A1)
 ## 📋 Requisitos
 
