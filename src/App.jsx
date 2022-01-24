@@ -70,6 +70,7 @@ function App() {
               {gameIsOver && <p className='acertos' >{`Você acertou ${answerCount}/5`}</p>}
               <ActionBtn handleGame={handleGame} gameIsOver={gameIsOver}/>
           </div>}
+          {!hasStarted && <h1>Quizzical</h1>}
           {!hasStarted && <ActionBtn startBtn="start-btn" handleGame={startGame} />}
       </main>
   );

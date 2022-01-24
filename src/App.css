@@ -6,6 +6,14 @@ main {
     margin: 0 auto;
     padding: 4em 4em 1em;
     min-height: 600px;
+    align-items: center;
+}
+
+h1 {
+    font-family: var(--ff-primary);
+    font-weight: 700;
+    text-align: center;
+    margin-top: auto;
 }
 
 .box {
