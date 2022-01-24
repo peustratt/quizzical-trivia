@@ -9,9 +9,9 @@ function Question({ question, correctAnswer, gameIsOver, options, handleIsCorrec
 
     useEffect(() => {
         if (gameIsOver && correctAnswer === selectedOption) {
-            handleIsCorrect()
+            handleIsCorrect();
         }
-    }, [gameIsOver])
+    }, [gameIsOver]);
 
     function handleClick(option) {
         !gameIsOver && setSelectedOption(option)

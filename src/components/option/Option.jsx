@@ -7,7 +7,7 @@ function Option({ option, correctAnswer, handleCLick, selectedOption, gameIsOver
         style = {
             backgroundColor: "#94D7A2",
         };
-        if (option === selectedOption && selectedOption != correctAnswer) {
+        if (option === selectedOption && selectedOption !== correctAnswer) {
             style = {
                 backgroundColor: "#F8BCBC",
                 opacity: .5

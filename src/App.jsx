@@ -9,6 +9,7 @@ function App() {
   const [gameIsOver, setGameIsover] = useState(() => false)
   const [answerCount, setAnswerCount] = useState(0)
   const [restartGame, setRestartGame] = useState(0)
+  const [hasStarted, setHasStarted] = useState(false)
 
   useEffect(() => {
     fetch("https://opentdb.com/api.php?amount=5")
@@ -29,13 +30,18 @@ function App() {
     ));
   },[restartGame])
 
+  function startGame() {
+    setHasStarted(true)
+  }
+
   function handleGame() {
     if (!gameIsOver) {
       setGameIsover(true);
     } else {
+      setRestartGame(Math.random());
       setGameIsover(false)
       setAnswerCount(0)
-      setRestartGame(Math.random())
+
     }
   }
 
@@ -59,11 +65,12 @@ function App() {
 
   return (
       <main>
-          {allQuestionsEl}
-          <div className="box">
+          {hasStarted && allQuestionsEl}
+          {hasStarted && <div className="box">
               {gameIsOver && <p className='acertos' >{`Você acertou ${answerCount}/5`}</p>}
               <ActionBtn handleGame={handleGame} gameIsOver={gameIsOver}/>
-          </div>
+          </div>}
+          {!hasStarted && <ActionBtn startBtn="start-btn" handleGame={startGame} />}
       </main>
   );
 }

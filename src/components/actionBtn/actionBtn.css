@@ -7,5 +7,12 @@
     font-size: 1.1em;
     font-weight: 600;
     padding: 0.6em 1.7em;
+}
 
+.start-btn {
+    align-self: center;
+    text-align: center;
+    justify-self: center;
+    width: 200px;
+    padding: .8em;
 }
