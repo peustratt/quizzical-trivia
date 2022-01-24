@@ -5,13 +5,13 @@
 
 ### Criar um quiz Webapp que lista perguntas
 
-❌ Criar duas telas, (começar & questões)
+✔️ Criar duas telas, (começar & questões)
 
 ✔️ Puxar 5 questões da [OTDB API](https://opentdb.com/api_config.php)
 
 ✔️ Contabilizar os acertos e renderizar o score em forma de fração
 
-❌ Indicar quais foram as respostas corretas
+✔️ Indicar quais foram as respostas corretas
 
 ## 🛠 Tecnologias
 
