@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { useEffect } from 'react/cjs/react.development';
+import React, { useState, useEffect } from 'react';
 import Option from '../option/Option';
 
 
@@ -11,6 +10,7 @@ function Question({ question, correctAnswer, gameIsOver, options, handleIsCorrec
         if (gameIsOver && correctAnswer === selectedOption) {
             handleIsCorrect();
         }
+        return null
     }, [gameIsOver]);
 
     function handleClick(option) {
