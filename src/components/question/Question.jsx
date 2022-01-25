@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { parseHtml } from '../../utils';
 import Option from '../option/Option';
 
 
@@ -20,9 +21,9 @@ function Question({ question, correctAnswer, gameIsOver, options, handleIsCorrec
     const optionsEl = options.map((option, index) => (
         <Option
             key={index}
-            option={option}
+            option={parseHtml(option)}
             correctAnswer={correctAnswer}
-            handleCLick={() => handleClick(option)}
+            handleCLick={() => handleClick(parseHtml(option))}
             selectedOption={selectedOption}
             gameIsOver={gameIsOver}
         />

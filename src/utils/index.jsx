@@ -7,3 +7,11 @@ export default function shuffleArray(array) {
     }
     return array;
 }
+
+export function parseHtml(html) {
+    const el = document.createElement('textarea')
+    el.innerHTML = html
+    let parsedText = el.value
+    el.remove()
+    return parsedText
+}

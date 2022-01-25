@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import ActionBtn from './components/actionBtn/ActionBtn';
 import Question from './components/question/Question';
 import { nanoid } from 'nanoid'
-import shuffleArray from './utils';
+import shuffleArray, {parseHtml} from './utils';
 
 function App() {
   const [allQuestions, setAllQuestions] = useState([])
@@ -18,9 +18,9 @@ function App() {
         data.results.map((question) => {
             return {
                 key: nanoid(),
-                question: question.question,
+                question: parseHtml(question.question),
                 type: question.type,
-                correctAnswer: question.correct_answer,
+                correctAnswer: parseHtml(question.correct_answer),
                 options: shuffleArray([
                     ...question.incorrect_answers,
                     question.correct_answer,
