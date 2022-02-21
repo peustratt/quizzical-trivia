@@ -26,7 +26,7 @@
 ✔️ Indicar quais foram as respostas corretas
 
 ## 🎁 Extras
-### Adicionado opções de escolha para o quiz,
+#### Adicionado opções de escolha para o quiz
 ✔️ Quantidade de perguntas
 
 ✔️ Categoria
@@ -35,8 +35,9 @@
 
 ✔️ Tipo
 
+#### Opções
 ✔️ Botão redefinir opcões
-
+#### Estilo 
 ✔️ Background personalizado para cada categoria
 
 ## 🛠 Tecnologias
