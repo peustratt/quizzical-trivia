@@ -39,3 +39,11 @@ h1 {
     display: grid;
     gap: 0.4em;
 }
+
+.input-box > input,
+.input-box > select {
+    height: 1.6em;
+    font-size: 1.1em;
+    text-indent: .2em;
+    border-radius: 5px;
+}
