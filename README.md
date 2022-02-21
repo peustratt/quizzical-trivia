@@ -2,7 +2,18 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/04c28bd8-6458-4f7e-8ad6-228d87919c90/deploy-status)](https://quizical-trivia.netlify.app/)
 - 🔗 Aplicação publicada no [Netlify](https://quizical-trivia.netlify.app/) ⬅️
 - 🔗 Link para o design no [Figma](https://www.figma.com/file/E9S5iPcm10f0RIHK8mCqKL/Quizzical-App?node-id=0%3A1)
-## 📋 Requisitos
+
+## Como jogar
+- Pra quem prefere jogar em português
+
+<img src="./public/images/portugues.gif" width=650>
+
+- Basta selecionar as opções desejadas(não é obrigátorio especificar)
+- A quantidade de perguntas varia de 1 a 50 no máx
+- Escolha as respostas corretas e verifique as respostas
+- Boa sorte!
+
+## 📋 Requisitos do projeto
 
 ### Criar um quiz Webapp que lista perguntas
 
@@ -23,6 +34,9 @@
 ✔️ Dificuldade
 
 ✔️ Tipo
+
+✔️ Botão redefinir opcões
+
 
 ## 🛠 Tecnologias
 
