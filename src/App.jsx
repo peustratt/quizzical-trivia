@@ -44,6 +44,12 @@ function App() {
     setHasStarted(true)
   }
 
+  function redefineSettings() {
+    setHasStarted(false)
+    setGameIsover(false)
+    setAnswerCount(0)
+  }
+
   function handleGame() {
     if (!gameIsOver) {
       setGameIsover(true);
@@ -109,6 +115,7 @@ function App() {
                       <p className="acertos">{`Você acertou ${answerCount}/${apiUrl.amount}`}</p>
                   )}
                   <ActionBtn handleGame={handleGame} gameIsOver={gameIsOver} />
+                  {gameIsOver && <ActionBtn handleGame={redefineSettings} startBtn="redefine"/>}
               </div>
           )}
           {!hasStarted && (

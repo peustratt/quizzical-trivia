@@ -105,7 +105,7 @@ const options = [
 export default function GameSetup({ apiUrl, handleApiUrl }) {
     const optionsDifficulty = options.map(option => (
         <option
-            key={options.value}
+            key={option.value}
             value={option.value}
             >
             {option.text}
@@ -144,7 +144,7 @@ export default function GameSetup({ apiUrl, handleApiUrl }) {
                     <option value="hard">Hard</option>
                 </select>
             </div>
-            
+
             <div className='input-box'>
                 <label htmlFor="type">Select Type: </label>
                 <select onChange={handleApiUrl} value={apiUrl.type} name="type" className="form-control">&gt;

@@ -7,7 +7,10 @@ function ActionBtn({ handleGame, gameIsOver, startBtn }) {
       : gameIsOver
       ? "Novo jogo"
       : "Verificar respostas";
-
+  if (startBtn === 'redefine') {
+    btnContent = 'Redefinir opções'
+  }
+  
   return <div className={`action-btn ${customClass}`}  onClick={handleGame}>{btnContent}</div>;
 }
 
