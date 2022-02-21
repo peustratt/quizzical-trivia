@@ -43,6 +43,7 @@ h1 {
 
 .box {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 1em;
@@ -53,6 +54,7 @@ h1 {
    font-weight: 700;
    color: var(--clr-primary);
    font-size: 1.3em;
+   text-align: center;
 }
 
 .choices {

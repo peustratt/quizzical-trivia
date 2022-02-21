@@ -130,24 +130,24 @@ function App() {
       <div className="page-body">
           {apiUrl.bg && <div className='img-wrapper'><img className="img-background" src={`./images/${apiUrl.bg}`} alt="background image"/></div>}
           <main>
-              {hasStarted && allQuestionsEl}
-              {hasStarted && (
+              {hasStarted &&
+                <>
+                  {allQuestionsEl}
+                  {gameIsOver && <p className="acertos">{`Você acertou ${answerCount}/${apiUrl.amount}`}</p>}
                   <div className="box">
-                      {gameIsOver && (
-                          <p className="acertos">{`Você acertou ${answerCount}/${apiUrl.amount}`}</p>
-                      )}
-                      <ActionBtn
-                          handleGame={handleGame}
-                          gameIsOver={gameIsOver}
-                      />
-                      {gameIsOver && (
-                          <ActionBtn
-                              handleGame={redefineSettings}
-                              startBtn="redefine"
-                          />
-                      )}
+                        <ActionBtn
+                            handleGame={handleGame}
+                            gameIsOver={gameIsOver}
+                        />
+                        {gameIsOver && (
+                            <ActionBtn
+                                handleGame={redefineSettings}
+                                startBtn="redefine"
+                            />
+                        )}
                   </div>
-              )}
+              </>
+}
               {!hasStarted && (
                   <>
                       <h1>Quizzical</h1>

@@ -23,5 +23,7 @@
 
 .options {
     display: flex;
+    flex-wrap: wrap;
     gap: 1em;
+    /* grid-template-columns: repeat(auto-fit, minmax(fit-content, 1fr)); */
 }
