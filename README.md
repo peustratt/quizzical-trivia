@@ -37,6 +37,7 @@
 
 ✔️ Botão redefinir opcões
 
+✔️ Background personalizado para cada categoria
 
 ## 🛠 Tecnologias
 

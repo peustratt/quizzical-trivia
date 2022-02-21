@@ -17,7 +17,7 @@ function App() {
     category: 'any',
     difficulty: 'any',
     type: 'any',
-    bg: "",
+    bg: "any.jpg",
   })
 
   console.log(apiUrl)
@@ -128,7 +128,7 @@ function App() {
 
   return (
       <div className="page-body">
-          {apiUrl.bg && <div className='img-wrapper'><img className="img-background" src={apiUrl.bg} alt="background image"/></div>}
+          {apiUrl.bg && <div className='img-wrapper'><img className="img-background" src={`./images/${apiUrl.bg}`} alt="background image"/></div>}
           <main>
               {hasStarted && allQuestionsEl}
               {hasStarted && (

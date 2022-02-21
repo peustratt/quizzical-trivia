@@ -2,127 +2,127 @@ export const options = [
     {
         value: 'any',
         text: 'Any Category',
-        bgUrl: './images/movies.jpg'
+        bgUrl: 'any.jpg'
     },
     {
         value: '9',
         text: 'General Knowledge',
-        bgUrl: ""
+        bgUrl: "general-knowledge.jpg"
     },
     {
         value: '10',
         text: 'Entertainment: Books',
-        bgUrl: ""
+        bgUrl: "books.jpg"
     },
     {
         value: '11',
         text: 'Entertainment: Film',
-        bgUrl: "./images/movies.jpg"
+        bgUrl: "movies.jpg"
     },
     {
         value: '12',
         text: 'Entertainment: Music',
-        bgUrl: ""
+        bgUrl: "music.jpg"
     },
     {
         value: '13',
         text: 'Entertainment: Musicals & Theatres',
-        bgUrl: ""
+        bgUrl: "musicals-theatres.jpg"
     },
     {
         value: '14',
         text: 'Entertainment: Television',
-        bgUrl: ""
+        bgUrl: "television.jpg"
     },
     {
         value: '15',
         text: 'Entertainment: Video Games',
-        bgUrl: ""
+        bgUrl: "videos-games.jpg"
     },
     {
         value: '16',
         text: 'Entertainment: Board Games',
-        bgUrl: ""
+        bgUrl: "board-games.jpg"
     },
     {
         value: '17',
-        text: 'Science &amp; Nature',
-        bgUrl: ""
+        text: 'Science & Nature',
+        bgUrl: "science.jpg"
     },
     {
         value: '18',
         text: 'Science: Computers',
-        bgUrl: ""
+        bgUrl: "computers.jpg"
     },
     {
         value: '19',
         text: 'Science: Mathematics',
-        bgUrl: ""
+        bgUrl: "mathematics.jpg"
     },
     {
         value: '20',
         text: 'Mythology',
-        bgUrl: ""
+        bgUrl: "mythology.jpg"
     },
     {
         value: '21',
         text: 'Sports',
-        bgUrl: ""
+        bgUrl: "sports.jpg"
     },
     {
         value: '22',
         text: 'Geography',
-        bgUrl: ""
+        bgUrl: "geography.jpg"
     },
     {
         value: '23',
         text: 'History',
-        bgUrl: ""
+        bgUrl: "history.jpg"
     },
     {
         value: '24',
         text: 'Politics',
-        bgUrl: ""
+        bgUrl: "politics.jpg"
     },
     {
         value: '25',
         text: 'Arts',
-        bgUrl: ""
+        bgUrl: "arts.jpg"
     },
     {
         value: '26',
         text: 'Celebritie',
-        bgUrl: ""
+        bgUrl: "celebrities.jpg"
     },
     {
         value: '27',
         text: 'Animals',
-        bgUrl: ""
+        bgUrl: "animals.jpg"
     },
     {
         value: '28',
         text: 'Vehicles',
-        bgUrl: ""
+        bgUrl: "vehicles.jpg"
     },
     {
         value: '29',
         text: 'Entertainment: Comics',
-        bgUrl: ""
+        bgUrl: "comics.jpg"
     },
     {
         value: '30',
         text: 'Science: Gadgets',
-        bgUrl: ""
+        bgUrl: "gadgets.jpg"
     },
     {
         value: '31',
         text: 'Entertainment: Japanese Anime & Manga',
-        bgUrl: ""
+        bgUrl: "anime.jpg"
     },
     {
         value: '32',
         text: 'Entertainment: Cartoon & Animations',
-        bgUrl: ""
+        bgUrl: "cartoons.jpg"
     }
 
 ]
