@@ -1,6 +1,7 @@
 # Quizzical-trivia using React
-- Aplicação publicada no [Netlify](https://quizical-trivia.netlify.app/)
-- Link para o design no [Figma](https://www.figma.com/file/E9S5iPcm10f0RIHK8mCqKL/Quizzical-App?node-id=0%3A1)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/04c28bd8-6458-4f7e-8ad6-228d87919c90/deploy-status)](https://quizical-trivia.netlify.app/)
+- 🔗 Aplicação publicada no [Netlify](https://quizical-trivia.netlify.app/) ⬅️
+- 🔗 Link para o design no [Figma](https://www.figma.com/file/E9S5iPcm10f0RIHK8mCqKL/Quizzical-App?node-id=0%3A1)
 ## 📋 Requisitos
 
 ### Criar um quiz Webapp que lista perguntas
