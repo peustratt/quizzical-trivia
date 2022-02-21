@@ -29,3 +29,13 @@ h1 {
    color: var(--clr-primary);
    font-size: 1.3em;
 }
+
+.choices {
+    display: grid;
+    gap: 0.7em;
+}
+
+.input-box {
+    display: grid;
+    gap: 0.4em;
+}
