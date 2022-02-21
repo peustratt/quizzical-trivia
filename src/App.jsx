@@ -10,9 +10,13 @@ function App() {
   const [answerCount, setAnswerCount] = useState(0)
   const [restartGame, setRestartGame] = useState(0)
   const [hasStarted, setHasStarted] = useState(false)
+  const [apiUrl, setApiUrl] = useState({amount: 5})
+
 
   useEffect(() => {
-    fetch("https://opentdb.com/api.php?amount=5")
+    console.log(apiUrl)
+    console.log(convertApiToString(apiUrl));
+    fetch("https://opentdb.com/api.php?" + convertApiToString(apiUrl))
     .then(resp => resp.json())
     .then(data => setAllQuestions(
         data.results.map((question) => {
@@ -28,7 +32,7 @@ function App() {
             };
         })
     ));
-  },[restartGame])
+  },[restartGame, hasStarted])
 
   function startGame() {
     setHasStarted(true)
@@ -49,6 +53,37 @@ function App() {
     setAnswerCount(prevCount => prevCount + 1)
   }
 
+  function handleApiUrl(event) {
+    const {name, value} = event.target
+    setApiUrl((prevUrl) => ({...prevUrl, [name]: value}))
+  }
+
+  function convertApiToString(apiObject) {
+    let urlString  = ""
+    for (let key of Object.keys(apiObject)) {
+
+      if (key == 'amount') {
+        let qtd = apiObject[key]
+        if(qtd < 1) {
+          urlString += key + "=1"
+        } else if (qtd > 50) {
+          urlString += key + "=50"
+        } else {
+          urlString += key + `=${qtd}`
+        }
+
+      } else {
+        let valor = apiObject[key]
+        if (valor != 'any') {
+          urlString += `${key}=${valor}`
+        }
+
+      }
+    }
+
+    return urlString
+  }
+
   const allQuestionsEl = allQuestions.map(question => {
     return (
         <Question
@@ -67,11 +102,20 @@ function App() {
       <main>
           {hasStarted && allQuestionsEl}
           {hasStarted && <div className="box">
-              {gameIsOver && <p className='acertos' >{`Você acertou ${answerCount}/5`}</p>}
+              {gameIsOver && <p className='acertos' >{`Você acertou ${answerCount}/${apiUrl.amount}`}</p>}
               <ActionBtn handleGame={handleGame} gameIsOver={gameIsOver}/>
           </div>}
-          {!hasStarted && <h1>Quizzical</h1>}
-          {!hasStarted && <ActionBtn startBtn="start-btn" handleGame={startGame} />}
+          {!hasStarted &&
+            <> 
+              <h1>Quizzical</h1>
+              <div>
+                <label htmlFor="trivia_amount">Number of Questions:</label>
+                <input onChange={handleApiUrl} value={apiUrl.amount} type="number" name="amount" id="trivia_amount" className="form-control"></input>
+              </div>
+              <ActionBtn startBtn="start-btn" handleGame={startGame} />
+            </>
+          }
+
       </main>
   );
 }
