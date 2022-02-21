@@ -4,6 +4,7 @@ import Question from './components/question/Question';
 import { nanoid } from 'nanoid'
 import shuffleArray, {parseHtml} from './utils';
 import GameSetup from './components/gameSetup/Gamesetup';
+import { options } from './components/gameSetup/Gamesetup';
 
 function App() {
   const [allQuestions, setAllQuestions] = useState([])
@@ -15,8 +16,11 @@ function App() {
     amount: 5,
     category: 'any',
     difficulty: 'any',
-    type: 'any'
+    type: 'any',
+    bg: "",
   })
+
+  console.log(apiUrl)
 
 
   useEffect(() => {
@@ -72,7 +76,20 @@ function App() {
     } else if (name === 'amount' && value < 1) {
       value = 1
     }
+    // If is category also change the background img
+    if (name === 'category') {
+      getImageUrl(value)
+    }
     setApiUrl((prevUrl) => ({...prevUrl, [name]: value}))
+  }
+
+  function getImageUrl(value) {
+    for (let item of options) {
+        if (item.value === value) {
+            console.log(item.bgUrl)
+            setApiUrl((prevUrl) => ({ ...prevUrl, bg: item.bgUrl }));
+        }
+    }
   }
 
   function convertApiToString(apiObject) {
@@ -106,29 +123,40 @@ function App() {
     );
   })
 
+  // const mainStyle = apiUrl.bg ? { backgroundImage: `url(${apiUrl.bg})`} : {}
+
+
   return (
-      <main>
-          {hasStarted && allQuestionsEl}
-          {hasStarted && (
-              <div className="box">
-                  {gameIsOver && (
-                      <p className="acertos">{`Você acertou ${answerCount}/${apiUrl.amount}`}</p>
-                  )}
-                  <ActionBtn handleGame={handleGame} gameIsOver={gameIsOver} />
-                  {gameIsOver && <ActionBtn handleGame={redefineSettings} startBtn="redefine"/>}
-              </div>
-          )}
-          {!hasStarted && (
-              <>
-                  <h1>Quizzical</h1>
-                  <GameSetup
-                      apiUrl={apiUrl}
-                      handleApiUrl={handleApiUrl}
-                  />
-                  <ActionBtn startBtn="start-btn" handleGame={startGame} />
-              </>
-          )}
-      </main>
+      <div className="page-body">
+          {apiUrl.bg && <div className='img-wrapper'><img className="img-background" src={apiUrl.bg} alt="background image"/></div>}
+          <main>
+              {hasStarted && allQuestionsEl}
+              {hasStarted && (
+                  <div className="box">
+                      {gameIsOver && (
+                          <p className="acertos">{`Você acertou ${answerCount}/${apiUrl.amount}`}</p>
+                      )}
+                      <ActionBtn
+                          handleGame={handleGame}
+                          gameIsOver={gameIsOver}
+                      />
+                      {gameIsOver && (
+                          <ActionBtn
+                              handleGame={redefineSettings}
+                              startBtn="redefine"
+                          />
+                      )}
+                  </div>
+              )}
+              {!hasStarted && (
+                  <>
+                      <h1>Quizzical</h1>
+                      <GameSetup apiUrl={apiUrl} handleApiUrl={handleApiUrl} />
+                      <ActionBtn startBtn="start-btn" handleGame={startGame} />
+                  </>
+              )}
+          </main>
+      </div>
   );
 }
 

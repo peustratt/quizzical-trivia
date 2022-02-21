@@ -10,4 +10,14 @@
     --clr-primary: #293264;
     --clr-secondary: #4D5B9E;
     --clr-tertiary: #D6DBF5;
+
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+#root {
+    height: 100%;
 }
