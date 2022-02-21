@@ -13,6 +13,16 @@
 
 ✔️ Indicar quais foram as respostas corretas
 
+## 🎁 Extras
+### Adicionado opções de escolha para o quiz,
+✔️ Quantidade de perguntas
+
+✔️ Categoria
+
+✔️ Dificuldade
+
+✔️ Tipo
+
 ## 🛠 Tecnologias
 
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" align="center" width="30" height="30" /> ReactJS
